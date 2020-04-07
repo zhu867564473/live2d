@@ -20,7 +20,7 @@
 <link rel="stylesheet" href="/live2d/css/live2d.css" />
 ```
 
-在 需要页面的body 标签内找到合适的位置插入 Live2D 看板娘的元素，按照 Html 书写规范写 
+在 需要页面的body 标签内找到合适的位置插入 Live2D 伊斯特瓦尔元素，按照 Html 书写规范写 
 ```html
 <div id="landlord" style="left:5px;bottom:0px;">
     <div class="message" style="opacity:0"></div>
@@ -47,7 +47,7 @@
         <input id="duType" value="douqilai,l2d_caihong" type="hidden">
     </div>
 </div>
-<div id="open_live2d">召唤蕾姆</div>
+<div id="open_live2d">伊斯特瓦尔</div>
 ```
 如果需要BGM支持可以按照上面的例子添加：
 ```html

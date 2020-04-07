@@ -1,4 +1,5 @@
-var home_Path = document.location.protocol +'//' + window.document.location.hostname +'/';
+// var home_Path = document.location.protocol +'//' + window.document.location.hostname + ":" + window.document.location.port +'/';
+var home_Path = document.location.href;
 
 var userAgent = window.navigator.userAgent.toLowerCase();
 console.log(userAgent);
@@ -289,8 +290,16 @@ if(!norunFlag){
 					type: 'POST',
 					url: talkAPI,
 					data: {
-						"info":info_,
-						"userid":userid_
+						"reqType": 0,
+						"perception": {
+							"inputText": {
+								"text": info_
+							}
+						},						
+						"userInfo": {
+							"apiKey": "",
+							"userId": userid_
+						}
 					},
 					success: function(res) {
 						if(res.code !== 100000){
@@ -446,7 +455,10 @@ if(!norunFlag){
 	}
 	$(document).ready(function() {
 		var AIimgSrc = [
-			home_Path + message_Path + "model/rem/remu2048/texture_00.png"
+			home_Path + message_Path + "model/histoire/histoire.1024/texture_00.png",
+			home_Path + message_Path + "model/histoire/histoire.1024/texture_01.png",
+			home_Path + message_Path + "model/histoire/histoire.1024/texture_02.png",
+			home_Path + message_Path + "model/histoire/histoire.1024/texture_03.png"
 		]
 		var images = [];
 		var imgLength = AIimgSrc.length;
@@ -468,7 +480,7 @@ if(!norunFlag){
 						},1300);
 					}
 					setTimeout(function(){
-						loadlive2d("live2d", message_Path+"model/rem/rem.json");
+						loadlive2d("live2d", message_Path+"model/histoire/model.json");
 					},1000);
 					initLive2d ();
 					images = null;
