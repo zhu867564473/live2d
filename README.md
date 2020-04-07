@@ -1,26 +1,19 @@
-# Live2d的看板娘——蕾姆(Rem) 
-#### [伊斯特瓦尔点这里](https://www.wikimoe.com/?post=76)。
-#### 基于[《给博客添加能动的看板娘(Live2D)-将其添加到网页上吧》](https://imjad.cn/archives/lab/add-dynamic-poster-girl-with-live2d-to-your-blog-02)上的源码进行修改。
-#### 在原先的基础上加上了如下功能：
+# [效果预览](https://zhu867564473.github.io/live2d/)
 
-	1.可以基于图灵机器人的聊天功能（需要自己写接口，默认隐藏）。
-	2.能够随意移动并记录位置（关闭浏览器后失效）。
-	3.能够随意唤醒或者关闭并记录状态。
-	4.自动判断浏览器是否为IE或者手机浏览器，如果判断为true则不加载伊斯。
-	5.给骚扰加了限制频率，不能狂骚扰了。
+## 准备工作
 
-### 准备工作
-首先下载代码。
+首先到下载代码。
 
 然后把解压出来的文件夹改名为：live2d 。
 
 ### 正式开工，文字部分参考自[在 Web 上展示 Live2D 吧！](https://github.com/galnetwen/Live2D)
+
 在需要页面的头部文件（header）引入界面样式，在 head 标签内插入如下代码：
 ```html
 <link rel="stylesheet" href="/live2d/css/live2d.css" />
 ```
 
-在 需要页面的body 标签内找到合适的位置插入 Live2D 伊斯特瓦尔元素，按照 Html 书写规范写 
+在 需要页面的body 标签内找到合适的位置插入 Live2D 看板娘的元素，按照 Html 书写规范写 
 ```html
 <div id="landlord" style="left:5px;bottom:0px;">
     <div class="message" style="opacity:0"></div>
@@ -47,7 +40,7 @@
         <input id="duType" value="douqilai,l2d_caihong" type="hidden">
     </div>
 </div>
-<div id="open_live2d">伊斯特瓦尔</div>
+<div id="open_live2d">召唤伊斯特瓦尔</div>
 ```
 如果需要BGM支持可以按照上面的例子添加：
 ```html
@@ -94,10 +87,10 @@ var talkAPI = "";//如果有类似图灵机器人的聊天接口请填写接口�
 PHP 程序推荐使用主题函数获取绝对路径。
 
 ### 效果预览
-![](http://t1.aixinxi.net/o_1c9b38oqd1ekb12v9pcf1ku81r7a.gif-j.jpg)  
+![](https://t1.aixinxi.net/o_1c3mofql9osmpeb1hfvsbv1hqua.gif-j.jpg)  
 
 	
 ### 模型说明
 本插件仅供学习和交流使用，禁止用于商业用途。
-本插件用到的模型为《Re：从零开始的异世界生活》中的蕾姆，故版权归官方所有。
+本插件用到的模型为《超次元游戏海王星》系列中的伊斯特瓦尔，动作表情则是取自Live2d官网的demo，故版权归各官方所有。
 原项目使用了 GPL v2 开源协议。
